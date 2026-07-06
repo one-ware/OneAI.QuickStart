@@ -28,17 +28,14 @@ jobs:
           done
           ls -lh dist/
 
-      - name: Delete existing 1.0 release (if any)
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release delete 1.0 --yes --cleanup-tag 2>/dev/null || true
-
-      - name: Create release and upload assets
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release create 1.0 dist/*.zip \
-            --title "QuickStart Projects v1.0" \
-            --notes "All OneAI QuickStart project datasets and models, packaged for use with ONE AI." \
-            --latest
+      - name: Create or update release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: "1.0"
+          name: "QuickStart Projects v1.0"
+          body: "All OneAI QuickStart project datasets and models, packaged for use with ONE AI."
+          artifacts: "dist/*.zip"
+          allowUpdates: true
+          replacesArtifacts: true
+          makeLatest: true
+          token: ${{ secrets.GITHUB_TOKEN }}
