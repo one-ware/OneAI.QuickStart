@@ -1,0 +1,92 @@
+[
+  {
+    "key": "chess",
+    "name": "Chess Pieces Detection",
+    "description": "Beginner-friendly object detection demo that detects and localizes chess pieces on a chessboard.",
+    "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_Chess.zip",
+    "previewImageUrl": "https://cloud.one-ware.com/img/quick-start/chess.webp",
+    "documentationUrl": null,
+    "tags": ["beginner", "objectDetection"]
+  },
+  {
+    "key": "chips",
+    "name": "Potato Chip Classification",
+    "description": "High-performance image classification demo that distinguishes defective from non-defective potato chips.",
+    "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_Chips.zip",
+    "previewImageUrl": "https://cloud.one-ware.com/img/quick-start/chips.webp",
+    "documentationUrl": "https://one-ware.com/projects/chips",
+    "tags": ["beginner", "classification"]
+  },
+  {
+    "key": "nist",
+    "name": "Handwritten Digit Classification",
+    "description": "Image classification demo using the NIST handwritten digits dataset to recognize numeric characters.",
+    "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_NIST.zip",
+    "previewImageUrl": "https://cloud.one-ware.com/img/quick-start/nist.webp",
+    "documentationUrl": "https://one-ware.com/projects/nist",
+    "tags": ["beginner", "classification"]
+  },
+  {
+    "key": "wildfire",
+    "name": "Wildfire Segmentation",
+    "description": "Segmentation demo for detecting wildfire areas in drone imagery.",
+    "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_Wildfire.zip",
+    "previewImageUrl": "https://cloud.one-ware.com/img/quick-start/wildfire.webp",
+    "documentationUrl": "https://one-ware.com/projects/wildfire",
+    "tags": ["advanced", "segmentation", "FPGA"]
+  },
+  {
+    "key": "scratches",
+    "name": "Scratches Detection Segmentation",
+    "description": "Segmentation demo for detecting scratches on a metallic surface.",
+    "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_Scratches.zip",
+    "previewImageUrl": "https://cloud.one-ware.com/img/quick-start/scratches.webp",
+    "documentationUrl": "https://one-ware.com/projects/scratches",
+    "tags": ["advanced", "segmentation"]
+  },
+  {
+    "key": "tumor",
+    "name": "Tumor Segmentation",
+    "description": "Segmentation demo for detecting and outlining brain tumors in medical imaging data.",
+    "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_Tumor.zip",
+    "previewImageUrl": "https://cloud.one-ware.com/img/quick-start/tumor.webp",
+    "documentationUrl": null,
+    "tags": ["advanced", "segmentation"]
+  },
+  {
+    "key": "dronesAndBirds",
+    "name": "Drones Difference Detection",
+    "description": "Multi Image Input demo to show ONE AI Difference Detection in action.",
+    "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_DronesAndBirds.zip",
+    "previewImageUrl": "https://cloud.one-ware.com/img/quick-start/dronesandbirds.webp",
+    "documentationUrl": "https://one-ware.com/projects/dronesAndBirds",
+    "tags": ["advanced", "objectDetection", "difference"]
+  },
+  {
+    "key": "cups",
+    "name": "Cups Print Detection",
+    "description": "Simple demo to detect prints on cups in highly variable background conditions.",
+    "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_Cups.zip",
+    "previewImageUrl": "https://cloud.one-ware.com/img/quick-start/cups.webp",
+    "documentationUrl": "https://one-ware.com/projects/cups",
+    "tags": ["beginner", "objectDetection"]
+  },
+  {
+    "key": "tennis",
+    "name": "Tennis",
+    "description": "Demo to detect small moving objects in a video.",
+    "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_Tennis.zip",
+    "previewImageUrl": "https://cloud.one-ware.com/img/quick-start/tennis.webp",
+    "documentationUrl": "https://one-ware.com/projects/tennis",
+    "tags": ["beginner", "objectDetection", "difference"]
+  },
+  {
+    "key": "persons",
+    "name": "Tracking Persons",
+    "description": "This demo evaluates person segmentation in a controlled indoor environment.",
+    "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_Persons.zip",
+    "previewImageUrl": "https://cloud.one-ware.com/img/quick-start/persons.webp",
+    "documentationUrl": "https://one-ware.com/projects/persons",
+    "tags": ["beginner", "segmentation", "rasperry pi"]
+  }
+]

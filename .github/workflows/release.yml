@@ -1,0 +1,44 @@
+name: Release QuickStart Projects
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Zip each project
+        run: |
+          mkdir -p dist
+          for dir in Chess Chips NIST Wildfire Scratches Tumor DronesAndBirds Cups Tennis Persons; do
+            if [ -d "$dir" ]; then
+              echo "Zipping $dir -> dist/OneAI_${dir}.zip"
+              zip -r "dist/OneAI_${dir}.zip" "$dir/"
+            fi
+          done
+          ls -lh dist/
+
+      - name: Delete existing 1.0 release (if any)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete 1.0 --yes --cleanup-tag 2>/dev/null || true
+
+      - name: Create release and upload assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create 1.0 dist/*.zip \
+            --title "QuickStart Projects v1.0" \
+            --notes "All OneAI QuickStart project datasets and models, packaged for use with ONE AI." \
+            --latest
