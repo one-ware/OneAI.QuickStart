@@ -1,0 +1,65 @@
+{
+  "version": "0.9.9.0",
+  "cameras": [
+    {
+      "type": "dataset",
+      "name": "Dataset simulated camera",
+      "staticSettings": {
+        "fps": 1,
+        "width": 648,
+        "height": 432
+      },
+      "presets": [
+        {
+          "type": "dataset",
+          "name": "Preset 1",
+          "relativeCropLeft": 0,
+          "relativeCropTop": 0,
+          "relativeCropRight": 0,
+          "relativeCropBottom": 0,
+          "resizeAfterCaptureValue": 0,
+          "resizeToWidth": false
+        }
+      ]
+    }
+  ],
+  "captureSettings": {
+    "saveDirectory": "Train",
+    "saveSubDirectory": null,
+    "saveSubDirectoryFail": null,
+    "saveSubDirectoryFalseDetection": null,
+    "saveFileNameAddition": null,
+    "imageFormat": ".jpg",
+    "isAiCheckEnabled": true,
+    "remoteControlIsEnabled": false,
+    "remoteControlUrl": "http://localhost:2800/",
+    "validationRuleOptions": [
+      {
+        "type": "countWeighted",
+        "min": 1,
+        "max": 5,
+        "weights": {
+          "1": {
+            "labelId": 1,
+            "weight": 1
+          },
+          "2": {
+            "labelId": 2,
+            "weight": 2
+          }
+        },
+        "appliesTo": "all",
+        "name": "birds",
+        "appliesToCamera": null,
+        "appliesToPreset": null,
+        "executeCheckPerCapture": true
+      }
+    ]
+  },
+  "runSettings": {
+    "selectedCamera": "Dataset simulated camera",
+    "selectedPreset": "Preset 1",
+    "previewMode": null,
+    "executionProvider": null
+  }
+}

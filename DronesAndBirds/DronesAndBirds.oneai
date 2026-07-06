@@ -1,0 +1,223 @@
+{
+  "type": "imageDetection",
+  "version": "0.9.9.0",
+  "data": {
+    "selectedAutoLabelModels": [],
+    "autoLabelMergeThreshold": 80,
+    "selectedRunModel": "",
+    "annotationMode": "objects",
+    "capabilityMode": "expert",
+    "fusionType": "difference",
+    "multiImageMode": "Default",
+    "advancedMultiImageSettings": {
+      "imageGroups": [],
+      "imageTypes": [],
+      "imagePositions": [],
+      "referencePosition": null,
+      "imageGroupMapping": [],
+      "comparisons": []
+    },
+    "validationSettings": {
+      "useValidationSplit": true,
+      "validationSplit": 20
+    },
+    "testSettings": {
+      "testImagePercentage": 0,
+      "validationImagePercentage": 100,
+      "validationImageSplitPercentage": 0
+    },
+    "labels": [
+      {
+        "name": "Drone",
+        "id": 1,
+        "groupId": 1,
+        "color": 4294901760,
+        "excludeFromTraining": false
+      },
+      {
+        "name": "Bird",
+        "id": 2,
+        "groupId": 1,
+        "color": 4284022563,
+        "excludeFromTraining": false
+      }
+    ],
+    "groups": [
+      {
+        "name": "Group 1",
+        "id": 1
+      }
+    ],
+    "hardwareSettings": {
+      "advancedSettings": false,
+      "configurationName": "GPU, Default",
+      "hardwareType": "GPU",
+      "prioritizeSpeedOptimization": false,
+      "computeCapability": 4,
+      "computeCapabilityUnit": "TOPS",
+      "dspBlocks": 0,
+      "dspGroups": 1,
+      "prioritizeMemoryOptimization": false,
+      "memoryLimit": 8,
+      "memoryLimitUnit": "GB",
+      "optimizeForParallelExecution": false,
+      "quantizedCalculations": false,
+      "bitsPerValue": 16,
+      "fpgaClockSpeed": 50,
+      "maximumMemoryUsage": 25,
+      "maximumDspUsage": 25,
+      "installedHardware": "Custom"
+    },
+    "preFiltersBegin": [
+      {
+        "id": "initialResize",
+        "isEnabled": true,
+        "settings": {
+          "width": 648,
+          "height": 432,
+          "resolution": 100,
+          "resizeInModel": false,
+          "usePadding": false
+        }
+      }
+    ],
+    "preFiltersBeforeAugmentation": [
+      {
+        "id": "crop",
+        "isEnabled": true,
+        "settings": {
+          "left": 0,
+          "top": 0,
+          "right": 1,
+          "bottom": 0.6461187
+        }
+      },
+      {
+        "id": "color",
+        "isEnabled": true,
+        "settings": {
+          "brightness": 0,
+          "contrast": 100,
+          "saturation": 180,
+          "hue": 0,
+          "gamma": 100
+        }
+      }
+    ],
+    "preFiltersAfterAugmentation": [],
+    "preFiltersEnd": [
+      {
+        "id": "channel",
+        "isEnabled": false,
+        "settings": {
+          "disableRChannel": false,
+          "disableGChannel": true,
+          "disableBChannel": true
+        }
+      }
+    ],
+    "augmentationsStatic": [
+      {
+        "id": "mosaic",
+        "isEnabled": false,
+        "settings": {}
+      },
+      {
+        "id": "move",
+        "isEnabled": true,
+        "settings": {
+          "fromX": -5,
+          "fromY": -5,
+          "toX": 5,
+          "toY": 5
+        }
+      },
+      {
+        "id": "rotate",
+        "isEnabled": true,
+        "settings": {
+          "fromAngle": 5,
+          "toAngle": -5
+        }
+      },
+      {
+        "id": "flip",
+        "isEnabled": true,
+        "settings": {
+          "horizontal": true,
+          "vertical": false
+        }
+      },
+      {
+        "id": "resize",
+        "isEnabled": true,
+        "settings": {
+          "fromX": 90,
+          "fromY": 90,
+          "toX": 110,
+          "toY": 110
+        }
+      }
+    ],
+    "augmentationsDynamic": [
+      {
+        "id": "color",
+        "isEnabled": false,
+        "settings": {
+          "fromBrightness": -10,
+          "fromContrast": 85,
+          "fromSaturation": 90,
+          "fromHue": 0,
+          "fromGamma": 100,
+          "toBrightness": 10,
+          "toContrast": 115,
+          "toSaturation": 110,
+          "toHue": 0,
+          "toGamma": 100
+        }
+      },
+      {
+        "id": "noise",
+        "isEnabled": true,
+        "settings": {
+          "fromNoise": 0,
+          "toNoise": 5
+        }
+      }
+    ],
+    "modelOutputSettings": {
+      "classificationType": "allIndividualClasses",
+      "predictionType": "sizePositionClass",
+      "segmentationType": "oneClassPerPixel",
+      "sizePredictionEffort": 25,
+      "positionPredictionResolution": 25,
+      "allowPositionOverlap": false,
+      "precisionRecallPrioritization": 50,
+      "minimumFps": 10
+    },
+    "modelInputSettings": {
+      "lightModeEstimatedSize": "Medium",
+      "lightModeNumberOfFeatures": "fewFeatures",
+      "lightModeTypeOfEnvironment": "controlled",
+      "lightModeTypeOfFeatures": "limited",
+      "surroundingSizeMode": "relativeToObject",
+      "minRelativeSurroundingSize": 150,
+      "maxRelativeSurroundingSize": 200,
+      "estimatedSurroundingMinWidth": 10,
+      "estimatedSurroundingMinHeight": 10,
+      "estimatedSurroundingMaxWidth": 15,
+      "estimatedSurroundingMaxHeight": 15,
+      "detectComplexity": 70,
+      "sameClassDifference": 61,
+      "backgroundDifference": 69,
+      "estimatedMinWidth": 10,
+      "estimatedMinHeight": 10,
+      "estimatedAvgWidth": 50,
+      "estimatedAvgHeight": 50,
+      "estimatedMaxWidth": 90,
+      "estimatedMaxHeight": 90,
+      "maxFeatures": 10,
+      "avgFeatures": 2
+    }
+  }
+}

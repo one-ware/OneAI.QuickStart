@@ -1,0 +1,190 @@
+{
+  "type": "imageDetection",
+  "version": "1.0.10.0",
+  "data": {
+    "selectedAutoLabelModels": [],
+    "autoLabelMergeThreshold": 80,
+    "selectedRunModel": "test_11_2026-03-16_13-37-02",
+    "annotationMode": "segmentation",
+    "capabilityMode": "advanced",
+    "fusionType": "single",
+    "multiImageMode": "Default",
+    "advancedMultiImageSettings": {
+      "imageGroups": [],
+      "imageTypes": [],
+      "imagePositions": [],
+      "referencePosition": null,
+      "imageGroupMapping": [],
+      "comparisons": []
+    },
+    "validationSettings": {
+      "useValidationSplit": true,
+      "validationSplit": 20
+    },
+    "testSettings": {
+      "testImagePercentage": 0,
+      "validationImagePercentage": 100,
+      "validationImageSplitPercentage": 0
+    },
+    "labels": [
+      {
+        "name": "scratch",
+        "id": 1,
+        "groupId": 1,
+        "color": 4294903306,
+        "excludeFromTraining": false
+      }
+    ],
+    "groups": [
+      {
+        "name": "Group 1",
+        "id": 1
+      }
+    ],
+    "hardwareSettings": {
+      "advancedSettings": true,
+      "configurationName": "Custom",
+      "hardwareType": "CPU",
+      "prioritizeSpeedOptimization": false,
+      "computeCapability": 1000,
+      "computeCapabilityUnit": "MOPS",
+      "dspBlocks": 0,
+      "dspGroups": 1,
+      "prioritizeMemoryOptimization": false,
+      "memoryLimit": 4,
+      "memoryLimitUnit": "GB",
+      "optimizeForParallelExecution": false,
+      "quantizedCalculations": false,
+      "bitsPerValue": 16,
+      "fpgaClockSpeed": 50,
+      "maximumMemoryUsage": 25,
+      "maximumDspUsage": 25,
+      "installedHardware": "Custom"
+    },
+    "preFiltersBegin": [
+      {
+        "id": "initialResize",
+        "isEnabled": true,
+        "settings": {
+          "width": 1264,
+          "height": 640,
+          "resolution": 40,
+          "resizeInModel": false,
+          "usePadding": false
+        }
+      }
+    ],
+    "preFiltersBeforeAugmentation": [],
+    "preFiltersAfterAugmentation": [],
+    "preFiltersEnd": [
+      {
+        "id": "channel",
+        "isEnabled": true,
+        "settings": {
+          "disableRChannel": false,
+          "disableGChannel": true,
+          "disableBChannel": true
+        }
+      }
+    ],
+    "augmentationsBegin": [],
+    "augmentationsStatic": [
+      {
+        "id": "mosaic",
+        "isEnabled": false,
+        "settings": {}
+      },
+      {
+        "id": "move",
+        "isEnabled": true,
+        "settings": {
+          "fromX": -10,
+          "fromY": -10,
+          "toX": 10,
+          "toY": 10
+        }
+      },
+      {
+        "id": "rotate",
+        "isEnabled": true,
+        "settings": {
+          "fromAngle": -180,
+          "toAngle": 180
+        }
+      },
+      {
+        "id": "flip",
+        "isEnabled": true,
+        "settings": {
+          "horizontal": true,
+          "vertical": true
+        }
+      },
+      {
+        "id": "resize",
+        "isEnabled": true,
+        "settings": {
+          "fromX": 70,
+          "fromY": 70,
+          "toX": 130,
+          "toY": 130
+        }
+      }
+    ],
+    "augmentationsDynamic": [
+      {
+        "id": "color",
+        "isEnabled": true,
+        "settings": {
+          "fromBrightness": -20,
+          "fromContrast": 80,
+          "fromSaturation": 100,
+          "fromHue": 0,
+          "fromGamma": 100,
+          "toBrightness": 20,
+          "toContrast": 120,
+          "toSaturation": 100,
+          "toHue": 0,
+          "toGamma": 100
+        }
+      }
+    ],
+    "modelOutputSettings": {
+      "classificationType": "allIndividualClasses",
+      "predictionType": "sizePositionClass",
+      "segmentationType": "oneClassPerPixel",
+      "sizePredictionEffort": 25,
+      "positionPredictionResolution": 60,
+      "allowPositionOverlap": false,
+      "precisionRecallPrioritization": 50,
+      "minimumFps": 25,
+      "optimizeSmallObjects": false
+    },
+    "modelInputSettings": {
+      "surroundingSizeMode": "relativeToObject",
+      "minRelativeSurroundingSize": 300,
+      "maxRelativeSurroundingSize": 300,
+      "estimatedSurroundingMinWidth": 10,
+      "estimatedSurroundingMinHeight": 10,
+      "estimatedSurroundingMaxWidth": 90,
+      "estimatedSurroundingMaxHeight": 90,
+      "detectComplexity": 80,
+      "sameClassDifference": 50,
+      "backgroundDifference": 20,
+      "estimatedMinWidth": 3,
+      "estimatedMinHeight": 3,
+      "estimatedAvgWidth": 15.5,
+      "estimatedAvgHeight": 15.5,
+      "estimatedMaxWidth": 40,
+      "estimatedMaxHeight": 40,
+      "maxFeatures": 7,
+      "avgFeatures": 3
+    },
+    "modelInputBasicModeSettings": {
+      "estimatedSize": "Small,Medium",
+      "numberOfFeatures": "fewFeatures",
+      "typeOfEnvironment": "controlled",
+      "typeOfFeatures": "limited"
+    }
+  }
+}

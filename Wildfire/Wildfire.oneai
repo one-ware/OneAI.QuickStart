@@ -1,0 +1,207 @@
+{
+  "type": "imageDetection",
+  "version": "1.0.10.0",
+  "data": {
+    "selectedAutoLabelModels": [
+      {
+        "name": "Demo_2026-03-06_10-30-06",
+        "minConfidence": 0
+      }
+    ],
+    "autoLabelMergeThreshold": 80,
+    "selectedRunModel": "",
+    "annotationMode": "segmentation",
+    "capabilityMode": "advanced",
+    "fusionType": "single",
+    "multiImageMode": "Default",
+    "advancedMultiImageSettings": {
+      "imageGroups": [],
+      "imageTypes": [],
+      "imagePositions": [],
+      "referencePosition": null,
+      "imageGroupMapping": [],
+      "comparisons": []
+    },
+    "validationSettings": {
+      "useValidationSplit": true,
+      "validationSplit": 20
+    },
+    "testSettings": {
+      "testImagePercentage": 0,
+      "validationImagePercentage": 100,
+      "validationImageSplitPercentage": 0
+    },
+    "labels": [
+      {
+        "name": "wildfire",
+        "id": 1,
+        "groupId": 1,
+        "color": 4292935684,
+        "excludeFromTraining": false
+      }
+    ],
+    "groups": [
+      {
+        "name": "Group 1",
+        "id": 1
+      }
+    ],
+    "hardwareSettings": {
+      "advancedSettings": false,
+      "configurationName": "AGILEX_3, A3C025",
+      "hardwareType": "FPGA",
+      "prioritizeSpeedOptimization": false,
+      "computeCapability": 20400,
+      "computeCapabilityUnit": "MOPS",
+      "dspBlocks": 136,
+      "dspGroups": 6,
+      "prioritizeMemoryOptimization": true,
+      "memoryLimit": 192,
+      "memoryLimitUnit": "KB",
+      "optimizeForParallelExecution": true,
+      "quantizedCalculations": true,
+      "bitsPerValue": 8,
+      "fpgaClockSpeed": 100,
+      "maximumMemoryUsage": 30,
+      "maximumDspUsage": 40,
+      "installedHardware": "Custom"
+    },
+    "preFiltersBegin": [
+      {
+        "id": "initialResize",
+        "isEnabled": true,
+        "settings": {
+          "width": 128,
+          "height": 128,
+          "resolution": 100,
+          "resizeInModel": false,
+          "usePadding": false
+        }
+      }
+    ],
+    "preFiltersBeforeAugmentation": [
+      {
+        "id": "color",
+        "isEnabled": true,
+        "settings": {
+          "brightness": 0,
+          "contrast": 100,
+          "saturation": 0,
+          "hue": 0,
+          "gamma": 100
+        }
+      }
+    ],
+    "preFiltersAfterAugmentation": [],
+    "preFiltersEnd": [
+      {
+        "id": "channel",
+        "isEnabled": true,
+        "settings": {
+          "disableRChannel": false,
+          "disableGChannel": true,
+          "disableBChannel": true
+        }
+      }
+    ],
+    "augmentationsBegin": [],
+    "augmentationsStatic": [
+      {
+        "id": "mosaic",
+        "isEnabled": false,
+        "settings": {}
+      },
+      {
+        "id": "move",
+        "isEnabled": true,
+        "settings": {
+          "fromX": -10,
+          "fromY": -10,
+          "toX": 10,
+          "toY": 10
+        }
+      },
+      {
+        "id": "rotate",
+        "isEnabled": true,
+        "settings": {
+          "fromAngle": -20,
+          "toAngle": 20
+        }
+      },
+      {
+        "id": "flip",
+        "isEnabled": true,
+        "settings": {
+          "horizontal": true,
+          "vertical": false
+        }
+      },
+      {
+        "id": "resize",
+        "isEnabled": true,
+        "settings": {
+          "fromX": 50,
+          "fromY": 50,
+          "toX": 150,
+          "toY": 150
+        }
+      }
+    ],
+    "augmentationsDynamic": [
+      {
+        "id": "color",
+        "isEnabled": true,
+        "settings": {
+          "fromBrightness": -30,
+          "fromContrast": 60,
+          "fromSaturation": 100,
+          "fromHue": 0,
+          "fromGamma": 100,
+          "toBrightness": 20,
+          "toContrast": 120,
+          "toSaturation": 100,
+          "toHue": 0,
+          "toGamma": 100
+        }
+      }
+    ],
+    "modelOutputSettings": {
+      "classificationType": "allIndividualClasses",
+      "predictionType": "sizePositionClass",
+      "segmentationType": "oneClassPerPixel",
+      "sizePredictionEffort": 25,
+      "positionPredictionResolution": 100,
+      "allowPositionOverlap": false,
+      "precisionRecallPrioritization": 50,
+      "minimumFps": 100,
+      "optimizeSmallObjects": false
+    },
+    "modelInputSettings": {
+      "surroundingSizeMode": "relativeToObject",
+      "minRelativeSurroundingSize": 100,
+      "maxRelativeSurroundingSize": 100,
+      "estimatedSurroundingMinWidth": 10,
+      "estimatedSurroundingMinHeight": 10,
+      "estimatedSurroundingMaxWidth": 90,
+      "estimatedSurroundingMaxHeight": 90,
+      "detectComplexity": 25,
+      "sameClassDifference": 25,
+      "backgroundDifference": 25,
+      "estimatedMinWidth": 10,
+      "estimatedMinHeight": 10,
+      "estimatedAvgWidth": 50,
+      "estimatedAvgHeight": 50,
+      "estimatedMaxWidth": 90,
+      "estimatedMaxHeight": 90,
+      "maxFeatures": 10,
+      "avgFeatures": 2
+    },
+    "modelInputBasicModeSettings": {
+      "estimatedSize": "Small,Medium",
+      "numberOfFeatures": "fewFeatures",
+      "typeOfEnvironment": "controlled",
+      "typeOfFeatures": "limited"
+    }
+  }
+}

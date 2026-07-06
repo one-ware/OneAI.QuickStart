@@ -1,0 +1,9 @@
+# Birds and Drones Detection Dataset
+The Birds and Drones Detection Dataset was artificially created with our own Image Composition Tool. The videos and images are free to use and open source.
+
+The dataset is created using a time lapse video of a city skyline as background sourced from Pixabay, which can be used without attribution. For the objects to detect, we have two different bird images (one bright, one dark) and two different drone images (one bright, one dark). The background images were extracted from the skyline video by skipping frames, resulting in a total of 40 different backgrounds. While one background image serves as the reference template, the same background or one frame before/after is taken and 1-4 objects (birds or drones) are placed on it. The objects are scaled to 7-10% of the image size to maintain realism, and both drones and birds are positioned either in the sky or in front of buildings.
+
+The dataset contains 259 image pairs (one template, one with objects) with a total of 340 drones and 199 birds distributed across all images. All images have a resolution of 1080x720 pixels.
+
+Get the synthetic_birds_drones dataset from (here)[https://github.com/one-ware/OneAI_demo_datasets/tree/main/datasets] in two parts and follow the tutorial
+(here)[https://one-ware.com/docs/one-ai/tutorials/difference-image-demo] to import the data in your OneAI project.

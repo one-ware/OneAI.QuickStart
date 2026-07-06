@@ -1,0 +1,210 @@
+{
+  "type": "imageDetection",
+  "guid": "5dde050d-1f04-4574-b174-f705cd45b523",
+  "version": "1.0.9.0",
+  "data": {
+    "selectedAutoLabelModels": [],
+    "autoLabelMergeThreshold": 80,
+    "selectedRunModel": "Test_Big_2026-02-27_08-58-38",
+    "annotationMode": "segmentation",
+    "capabilityMode": "basic",
+    "fusionType": "single",
+    "multiImageMode": "Default",
+    "advancedMultiImageSettings": {
+      "imageGroups": [],
+      "imageTypes": [],
+      "imagePositions": [],
+      "referencePosition": null,
+      "imageGroupMapping": [],
+      "comparisons": []
+    },
+    "validationSettings": {
+      "useValidationSplit": false,
+      "validationSplit": 20
+    },
+    "testSettings": {
+      "testImagePercentage": 0,
+      "validationImagePercentage": 100,
+      "validationImageSplitPercentage": 0
+    },
+    "labels": [
+      {
+        "name": "person",
+        "id": 1,
+        "groupId": 1,
+        "color": 4294903110,
+        "excludeFromTraining": false
+      }
+    ],
+    "groups": [
+      {
+        "name": "Group 1",
+        "id": 1
+      }
+    ],
+    "hardwareSettings": {
+      "advancedSettings": true,
+      "configurationName": "Custom",
+      "hardwareType": "CPU",
+      "prioritizeSpeedOptimization": false,
+      "computeCapability": 100,
+      "computeCapabilityUnit": "MOPS",
+      "dspBlocks": 0,
+      "dspGroups": 1,
+      "prioritizeMemoryOptimization": false,
+      "memoryLimit": 4,
+      "memoryLimitUnit": "GB",
+      "optimizeForParallelExecution": false,
+      "quantizedCalculations": false,
+      "bitsPerValue": 16,
+      "fpgaClockSpeed": 50,
+      "maximumMemoryUsage": 25,
+      "maximumDspUsage": 25,
+      "installedHardware": "Custom"
+    },
+    "preFiltersBegin": [
+      {
+        "id": "initialResize",
+        "isEnabled": true,
+        "settings": {
+          "width": 640,
+          "height": 360,
+          "resolution": 100,
+          "resizeInModel": false,
+          "usePadding": false
+        }
+      }
+    ],
+    "preFiltersBeforeAugmentation": [],
+    "preFiltersAfterAugmentation": [],
+    "preFiltersEnd": [
+      {
+        "id": "channel",
+        "isEnabled": true,
+        "settings": {
+          "disableRChannel": false,
+          "disableGChannel": true,
+          "disableBChannel": true
+        }
+      }
+    ],
+    "augmentationsBegin": [],
+    "augmentationsStatic": [
+      {
+        "id": "mosaic",
+        "isEnabled": true,
+        "settings": {}
+      },
+      {
+        "id": "move",
+        "isEnabled": true,
+        "settings": {
+          "fromX": -10,
+          "fromY": -10,
+          "toX": 10,
+          "toY": 10
+        }
+      },
+      {
+        "id": "rotate",
+        "isEnabled": false,
+        "settings": {
+          "fromAngle": -180,
+          "toAngle": 180
+        }
+      },
+      {
+        "id": "flip",
+        "isEnabled": true,
+        "settings": {
+          "horizontal": true,
+          "vertical": false
+        }
+      },
+      {
+        "id": "resize",
+        "isEnabled": true,
+        "settings": {
+          "fromX": 80,
+          "fromY": 80,
+          "toX": 120,
+          "toY": 120
+        }
+      }
+    ],
+    "augmentationsDynamic": [
+      {
+        "id": "color",
+        "isEnabled": true,
+        "settings": {
+          "fromBrightness": -20,
+          "fromContrast": 80,
+          "fromSaturation": 100,
+          "fromHue": 0,
+          "fromGamma": 100,
+          "toBrightness": 10,
+          "toContrast": 120,
+          "toSaturation": 100,
+          "toHue": 0,
+          "toGamma": 100
+        }
+      },
+      {
+        "id": "noise",
+        "isEnabled": true,
+        "settings": {
+          "fromNoise": 0,
+          "toNoise": 3
+        }
+      },
+      {
+        "id": "frequency",
+        "isEnabled": true,
+        "settings": {
+          "fromEnableLowPass": true,
+          "fromLowPassSigma": 0,
+          "toEnableLowPass": true,
+          "toLowPassSigma": 1,
+          "enableLowPassKernel": false,
+          "toKernelSize": 5
+        }
+      }
+    ],
+    "modelOutputSettings": {
+      "classificationType": "allIndividualClasses",
+      "predictionType": "sizePositionClass",
+      "segmentationType": "oneClassPerPixel",
+      "sizePredictionEffort": 25,
+      "positionPredictionResolution": 25,
+      "allowPositionOverlap": false,
+      "precisionRecallPrioritization": 50,
+      "minimumFps": 30
+    },
+    "modelInputSettings": {
+      "surroundingSizeMode": "relativeToObject",
+      "minRelativeSurroundingSize": 100,
+      "maxRelativeSurroundingSize": 100,
+      "estimatedSurroundingMinWidth": 10,
+      "estimatedSurroundingMinHeight": 10,
+      "estimatedSurroundingMaxWidth": 90,
+      "estimatedSurroundingMaxHeight": 90,
+      "detectComplexity": 30,
+      "sameClassDifference": 20,
+      "backgroundDifference": 50,
+      "estimatedMinWidth": 10,
+      "estimatedMinHeight": 10,
+      "estimatedAvgWidth": 50,
+      "estimatedAvgHeight": 50,
+      "estimatedMaxWidth": 90,
+      "estimatedMaxHeight": 90,
+      "maxFeatures": 10,
+      "avgFeatures": 2
+    },
+    "modelInputBasicModeSettings": {
+      "estimatedSize": "Small,Medium",
+      "numberOfFeatures": "fewFeatures",
+      "typeOfEnvironment": "controlled",
+      "typeOfFeatures": "similar"
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "type": "imageDetection",
+  "version": "0.9.7.1",
+  "data": {
+    "selectedAutoLabelModels": [
+      {
+        "name": "demo",
+        "minConfidence": 0
+      }
+    ],
+    "autoLabelMergeThreshold": 80,
+    "selectedRunModel": "",
+    "annotationMode": "classes",
+    "fusionType": "single",
+    "multiImageMode": "Default",
+    "advancedMultiImageSettings": {
+      "imageGroups": [],
+      "imageTypes": [],
+      "imagePositions": [],
+      "referencePosition": null,
+      "imageGroupMapping": [],
+      "comparisons": []
+    },
+    "validationSettings": {
+      "useValidationSplit": true,
+      "validationSplit": 20
+    },
+    "testSettings": {
+      "testImagePercentage": 0,
+      "validationImagePercentage": 0,
+      "validationImageSplitPercentage": 0
+    },
+    "labels": [
+      {
+        "name": "Defective",
+        "id": 1,
+        "groupId": 1,
+        "color": 4294901760,
+        "excludeFromTraining": false
+      },
+      {
+        "name": "Non-Defective",
+        "id": 2,
+        "groupId": 1,
+        "color": 4278255360,
+        "excludeFromTraining": false
+      }
+    ],
+    "groups": [
+      {
+        "name": "Group 1",
+        "id": 1
+      }
+    ],
+    "hardwareSettings": {
+      "advancedSettings": false,
+      "configurationName": "ALTERA_MAX_10, 10M16",
+      "hardwareType": "FPGA",
+      "prioritizeSpeedOptimization": false,
+      "computeCapability": 6300,
+      "computeCapabilityUnit": "MOPS",
+      "dspBlocks": 90,
+      "dspGroups": 1,
+      "prioritizeMemoryOptimization": true,
+      "memoryLimit": 68,
+      "memoryLimitUnit": "KB",
+      "optimizeForParallelExecution": true,
+      "quantizedCalculations": true,
+      "bitsPerValue": 8,
+      "fpgaClockSpeed": 50,
+      "maximumMemoryUsage": 90,
+      "maximumDspUsage": 90,
+      "installedHardware": "Custom"
+    },
+    "preFiltersBegin": [
+      {
+        "id": "initialResize",
+        "isEnabled": true,
+        "settings": {
+          "width": 512,
+          "height": 512,
+          "resolution": 10,
+          "resizeInModel": false,
+          "usePadding": false
+        }
+      }
+    ],
+    "preFiltersBeforeAugmentation": [],
+    "preFiltersAfterAugmentation": [],
+    "preFiltersEnd": [
+      {
+        "id": "channel",
+        "isEnabled": false,
+        "settings": {
+          "disableRChannel": false,
+          "disableGChannel": false,
+          "disableBChannel": false
+        }
+      }
+    ],
+    "augmentationsStatic": [
+      {
+        "id": "mosaic",
+        "isEnabled": false,
+        "settings": {}
+      },
+      {
+        "id": "move",
+        "isEnabled": true,
+        "settings": {
+          "fromX": -15,
+          "fromY": -15,
+          "toX": 15,
+          "toY": 15
+        }
+      },
+      {
+        "id": "rotate",
+        "isEnabled": true,
+        "settings": {
+          "fromAngle": 180,
+          "toAngle": -180
+        }
+      },
+      {
+        "id": "flip",
+        "isEnabled": true,
+        "settings": {
+          "horizontal": true,
+          "vertical": true
+        }
+      },
+      {
+        "id": "resize",
+        "isEnabled": true,
+        "settings": {
+          "fromX": 80,
+          "fromY": 80,
+          "toX": 120,
+          "toY": 120
+        }
+      }
+    ],
+    "augmentationsDynamic": [
+      {
+        "id": "color",
+        "isEnabled": true,
+        "settings": {
+          "fromBrightness": -20,
+          "fromContrast": 80,
+          "fromSaturation": 80,
+          "fromHue": 0,
+          "fromGamma": 100,
+          "toBrightness": 20,
+          "toContrast": 120,
+          "toSaturation": 120,
+          "toHue": 0,
+          "toGamma": 100
+        }
+      },
+      {
+        "id": "noise",
+        "isEnabled": true,
+        "settings": {
+          "fromNoise": 0,
+          "toNoise": 5
+        }
+      }
+    ],
+    "modelOutputSettings": {
+      "classificationType": "oneClassPerImage",
+      "predictionType": "sizePositionClass",
+      "segmentationType": "oneClassPerPixel",
+      "sizePredictionEffort": 25,
+      "positionPredictionResolution": 25,
+      "allowPositionOverlap": false,
+      "precisionRecallPrioritization": 50,
+      "minimumFps": 20
+    },
+    "modelInputSettings": {
+      "surroundingSizeMode": "relativeToObject",
+      "minRelativeSurroundingSize": 100,
+      "maxRelativeSurroundingSize": 100,
+      "estimatedSurroundingMinWidth": 10,
+      "estimatedSurroundingMinHeight": 10,
+      "estimatedSurroundingMaxWidth": 30,
+      "estimatedSurroundingMaxHeight": 30,
+      "detectComplexity": 10,
+      "sameClassDifference": 40,
+      "backgroundDifference": 5,
+      "estimatedMinWidth": 5,
+      "estimatedMinHeight": 5,
+      "estimatedAvgWidth": 15,
+      "estimatedAvgHeight": 15,
+      "estimatedMaxWidth": 30,
+      "estimatedMaxHeight": 30,
+      "maxFeatures": 8,
+      "avgFeatures": 1.5
+    }
+  }
+}
