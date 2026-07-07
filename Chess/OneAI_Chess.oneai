@@ -1,6 +1,6 @@
 {
   "type": "imageDetection",
-  "version": "0.9.7.1",
+  "version": "1.0.30.0",
   "data": {
     "selectedAutoLabelModels": [
       {
@@ -11,19 +11,24 @@
     "autoLabelMergeThreshold": 80,
     "selectedRunModel": "",
     "annotationMode": "objects",
-    "fusionType": "single",
-    "multiImageMode": "Default",
-    "advancedMultiImageSettings": {
+    "capabilityMode": "advanced",
+    "multiImage": {
+      "isEnabled": false,
+      "fusionType": "difference",
+      "mode": "default",
       "imageGroups": [],
-      "imageTypes": [],
-      "imagePositions": [],
-      "referencePosition": null,
-      "imageGroupMapping": [],
-      "comparisons": []
+      "overlayAnnotationPreview": true,
+      "advancedSettings": {
+        "imageTypes": [],
+        "imagePositions": [],
+        "referencePosition": null,
+        "imageGroupMapping": [],
+        "comparisons": []
+      }
     },
     "validationSettings": {
-      "useValidationSplit": false,
-      "validationSplit": 20
+      "useValidationSplit": true,
+      "validationSplit": 0
     },
     "testSettings": {
       "testImagePercentage": 0,
@@ -123,8 +128,8 @@
       }
     ],
     "hardwareSettings": {
-      "advancedSettings": false,
-      "configurationName": "CPU, Default",
+      "advancedSettings": true,
+      "configurationName": "Custom",
       "hardwareType": "CPU",
       "prioritizeSpeedOptimization": false,
       "computeCapability": 10000,
@@ -180,6 +185,7 @@
         }
       }
     ],
+    "augmentationsBegin": [],
     "augmentationsStatic": [
       {
         "id": "mosaic",
@@ -249,9 +255,11 @@
       "positionPredictionResolution": 50,
       "allowPositionOverlap": false,
       "precisionRecallPrioritization": 50,
-      "minimumFps": 60
+      "minimumFps": 60,
+      "optimizeSmallObjects": false
     },
     "modelInputSettings": {
+      "segmentResizeThreshold": 50,
       "surroundingSizeMode": "relativeToObject",
       "minRelativeSurroundingSize": 100,
       "maxRelativeSurroundingSize": 100,
@@ -270,6 +278,12 @@
       "estimatedMaxHeight": 90,
       "maxFeatures": 10,
       "avgFeatures": 2
+    },
+    "modelInputBasicModeSettings": {
+      "estimatedSize": "Small,Medium",
+      "numberOfFeatures": "fewFeatures",
+      "typeOfEnvironment": "controlled",
+      "typeOfFeatures": "limited"
     }
   }
 }

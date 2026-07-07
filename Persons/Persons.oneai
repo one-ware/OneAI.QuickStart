@@ -1,26 +1,29 @@
 {
   "type": "imageDetection",
-  "guid": "5dde050d-1f04-4574-b174-f705cd45b523",
-  "version": "1.0.9.0",
+  "version": "1.0.29.0",
   "data": {
     "selectedAutoLabelModels": [],
     "autoLabelMergeThreshold": 80,
     "selectedRunModel": "Test_Big_2026-02-27_08-58-38",
     "annotationMode": "segmentation",
     "capabilityMode": "basic",
-    "fusionType": "single",
-    "multiImageMode": "Default",
-    "advancedMultiImageSettings": {
+    "multiImage": {
+      "isEnabled": false,
+      "fusionType": "difference",
+      "mode": "default",
       "imageGroups": [],
-      "imageTypes": [],
-      "imagePositions": [],
-      "referencePosition": null,
-      "imageGroupMapping": [],
-      "comparisons": []
+      "overlayAnnotationPreview": true,
+      "advancedSettings": {
+        "imageTypes": [],
+        "imagePositions": [],
+        "referencePosition": null,
+        "imageGroupMapping": [],
+        "comparisons": []
+      }
     },
     "validationSettings": {
-      "useValidationSplit": false,
-      "validationSplit": 20
+      "useValidationSplit": true,
+      "validationSplit": 0
     },
     "testSettings": {
       "testImagePercentage": 0,
@@ -43,11 +46,11 @@
       }
     ],
     "hardwareSettings": {
-      "advancedSettings": true,
-      "configurationName": "Custom",
+      "advancedSettings": false,
+      "configurationName": "CPU, Default",
       "hardwareType": "CPU",
       "prioritizeSpeedOptimization": false,
-      "computeCapability": 100,
+      "computeCapability": 10000,
       "computeCapabilityUnit": "MOPS",
       "dspBlocks": 0,
       "dspGroups": 1,
@@ -178,9 +181,11 @@
       "positionPredictionResolution": 25,
       "allowPositionOverlap": false,
       "precisionRecallPrioritization": 50,
-      "minimumFps": 30
+      "minimumFps": 30,
+      "optimizeSmallObjects": false
     },
     "modelInputSettings": {
+      "segmentResizeThreshold": 50,
       "surroundingSizeMode": "relativeToObject",
       "minRelativeSurroundingSize": 100,
       "maxRelativeSurroundingSize": 100,

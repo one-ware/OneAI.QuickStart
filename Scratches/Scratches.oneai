@@ -1,21 +1,25 @@
 {
   "type": "imageDetection",
-  "version": "1.0.10.0",
+  "version": "1.0.30.0",
   "data": {
     "selectedAutoLabelModels": [],
     "autoLabelMergeThreshold": 80,
-    "selectedRunModel": "test_11_2026-03-16_13-37-02",
+    "selectedRunModel": "",
     "annotationMode": "segmentation",
     "capabilityMode": "advanced",
-    "fusionType": "single",
-    "multiImageMode": "Default",
-    "advancedMultiImageSettings": {
+    "multiImage": {
+      "isEnabled": false,
+      "fusionType": "difference",
+      "mode": "default",
       "imageGroups": [],
-      "imageTypes": [],
-      "imagePositions": [],
-      "referencePosition": null,
-      "imageGroupMapping": [],
-      "comparisons": []
+      "overlayAnnotationPreview": true,
+      "advancedSettings": {
+        "imageTypes": [],
+        "imagePositions": [],
+        "referencePosition": null,
+        "imageGroupMapping": [],
+        "comparisons": []
+      }
     },
     "validationSettings": {
       "useValidationSplit": true,
@@ -42,22 +46,22 @@
       }
     ],
     "hardwareSettings": {
-      "advancedSettings": true,
-      "configurationName": "Custom",
-      "hardwareType": "CPU",
+      "advancedSettings": false,
+      "configurationName": "GPU, Default",
+      "hardwareType": "GPU",
       "prioritizeSpeedOptimization": false,
-      "computeCapability": 1000,
-      "computeCapabilityUnit": "MOPS",
+      "computeCapability": 4,
+      "computeCapabilityUnit": "TOPS",
       "dspBlocks": 0,
       "dspGroups": 1,
       "prioritizeMemoryOptimization": false,
-      "memoryLimit": 4,
+      "memoryLimit": 8,
       "memoryLimitUnit": "GB",
       "optimizeForParallelExecution": false,
       "quantizedCalculations": false,
       "bitsPerValue": 16,
       "fpgaClockSpeed": 50,
-      "maximumMemoryUsage": 25,
+      "maximumMemoryUsage": 50,
       "maximumDspUsage": 25,
       "installedHardware": "Custom"
     },
@@ -161,6 +165,7 @@
       "optimizeSmallObjects": false
     },
     "modelInputSettings": {
+      "segmentResizeThreshold": 50,
       "surroundingSizeMode": "relativeToObject",
       "minRelativeSurroundingSize": 300,
       "maxRelativeSurroundingSize": 300,
@@ -168,7 +173,7 @@
       "estimatedSurroundingMinHeight": 10,
       "estimatedSurroundingMaxWidth": 90,
       "estimatedSurroundingMaxHeight": 90,
-      "detectComplexity": 80,
+      "detectComplexity": 60,
       "sameClassDifference": 50,
       "backgroundDifference": 20,
       "estimatedMinWidth": 3,
