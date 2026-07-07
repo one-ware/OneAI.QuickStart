@@ -1,6 +1,6 @@
 {
   "type": "imageDetection",
-  "version": "0.9.7.1",
+  "version": "1.0.29.0",
   "data": {
     "selectedAutoLabelModels": [
       {
@@ -11,15 +11,20 @@
     "autoLabelMergeThreshold": 80,
     "selectedRunModel": "",
     "annotationMode": "classes",
-    "fusionType": "single",
-    "multiImageMode": "Default",
-    "advancedMultiImageSettings": {
+    "capabilityMode": "advanced",
+    "multiImage": {
+      "isEnabled": false,
+      "fusionType": "difference",
+      "mode": "default",
       "imageGroups": [],
-      "imageTypes": [],
-      "imagePositions": [],
-      "referencePosition": null,
-      "imageGroupMapping": [],
-      "comparisons": []
+      "overlayAnnotationPreview": true,
+      "advancedSettings": {
+        "imageTypes": [],
+        "imagePositions": [],
+        "referencePosition": null,
+        "imageGroupMapping": [],
+        "comparisons": []
+      }
     },
     "validationSettings": {
       "useValidationSplit": true,
@@ -54,15 +59,15 @@
     ],
     "hardwareSettings": {
       "advancedSettings": false,
-      "configurationName": "ALTERA_MAX_10, 10M16",
+      "configurationName": "Altera\u2122 Max\u00AE 10, 10M02",
       "hardwareType": "FPGA",
       "prioritizeSpeedOptimization": false,
-      "computeCapability": 6300,
+      "computeCapability": 2240,
       "computeCapabilityUnit": "MOPS",
-      "dspBlocks": 90,
+      "dspBlocks": 32,
       "dspGroups": 1,
       "prioritizeMemoryOptimization": true,
-      "memoryLimit": 68,
+      "memoryLimit": 13,
       "memoryLimitUnit": "KB",
       "optimizeForParallelExecution": true,
       "quantizedCalculations": true,
@@ -98,6 +103,7 @@
         }
       }
     ],
+    "augmentationsBegin": [],
     "augmentationsStatic": [
       {
         "id": "mosaic",
@@ -175,9 +181,11 @@
       "positionPredictionResolution": 25,
       "allowPositionOverlap": false,
       "precisionRecallPrioritization": 50,
-      "minimumFps": 20
+      "minimumFps": 20,
+      "optimizeSmallObjects": false
     },
     "modelInputSettings": {
+      "segmentResizeThreshold": 50,
       "surroundingSizeMode": "relativeToObject",
       "minRelativeSurroundingSize": 100,
       "maxRelativeSurroundingSize": 100,
@@ -196,6 +204,12 @@
       "estimatedMaxHeight": 30,
       "maxFeatures": 8,
       "avgFeatures": 1.5
+    },
+    "modelInputBasicModeSettings": {
+      "estimatedSize": "Small,Medium",
+      "numberOfFeatures": "fewFeatures",
+      "typeOfEnvironment": "controlled",
+      "typeOfFeatures": "limited"
     }
   }
 }

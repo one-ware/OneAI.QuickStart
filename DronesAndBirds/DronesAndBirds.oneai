@@ -1,21 +1,33 @@
 {
   "type": "imageDetection",
-  "version": "0.9.9.0",
+  "version": "1.0.30.0",
   "data": {
-    "selectedAutoLabelModels": [],
+    "selectedAutoLabelModels": [
+      {
+        "name": "demo",
+        "minConfidence": 0
+      }
+    ],
     "autoLabelMergeThreshold": 80,
     "selectedRunModel": "",
     "annotationMode": "objects",
-    "capabilityMode": "expert",
-    "fusionType": "difference",
-    "multiImageMode": "Default",
-    "advancedMultiImageSettings": {
-      "imageGroups": [],
-      "imageTypes": [],
-      "imagePositions": [],
-      "referencePosition": null,
-      "imageGroupMapping": [],
-      "comparisons": []
+    "capabilityMode": "advanced",
+    "multiImage": {
+      "isEnabled": true,
+      "fusionType": "difference",
+      "mode": "default",
+      "imageGroups": [
+        "temp",
+        "test"
+      ],
+      "overlayAnnotationPreview": true,
+      "advancedSettings": {
+        "imageTypes": [],
+        "imagePositions": [],
+        "referencePosition": null,
+        "imageGroupMapping": [],
+        "comparisons": []
+      }
     },
     "validationSettings": {
       "useValidationSplit": true,
@@ -116,6 +128,7 @@
         }
       }
     ],
+    "augmentationsBegin": [],
     "augmentationsStatic": [
       {
         "id": "mosaic",
@@ -193,13 +206,11 @@
       "positionPredictionResolution": 25,
       "allowPositionOverlap": false,
       "precisionRecallPrioritization": 50,
-      "minimumFps": 10
+      "minimumFps": 10,
+      "optimizeSmallObjects": false
     },
     "modelInputSettings": {
-      "lightModeEstimatedSize": "Medium",
-      "lightModeNumberOfFeatures": "fewFeatures",
-      "lightModeTypeOfEnvironment": "controlled",
-      "lightModeTypeOfFeatures": "limited",
+      "segmentResizeThreshold": 50,
       "surroundingSizeMode": "relativeToObject",
       "minRelativeSurroundingSize": 150,
       "maxRelativeSurroundingSize": 200,
@@ -218,6 +229,12 @@
       "estimatedMaxHeight": 90,
       "maxFeatures": 10,
       "avgFeatures": 2
+    },
+    "modelInputBasicModeSettings": {
+      "estimatedSize": "Medium",
+      "numberOfFeatures": "fewFeatures",
+      "typeOfEnvironment": "controlled",
+      "typeOfFeatures": "limited"
     }
   }
 }

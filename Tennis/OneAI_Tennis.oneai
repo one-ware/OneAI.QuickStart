@@ -1,54 +1,32 @@
 {
   "type": "imageDetection",
-  "guid": "e84921be-e08b-45a1-a49b-2e91baa35e6c",
-  "version": "1.0.1.0",
+  "version": "1.0.30.0",
   "data": {
-    "selectedAutoLabelModels": [
-      {
-        "name": "bigger_2026-02-13_23-05-34",
-        "minConfidence": 0
-      }
-    ],
+    "selectedAutoLabelModels": [],
     "autoLabelMergeThreshold": 80,
     "selectedRunModel": "",
     "annotationMode": "objects",
     "capabilityMode": "advanced",
-    "fusionType": "difference",
-    "multiImageMode": "Default",
-    "advancedMultiImageSettings": {
+    "multiImage": {
+      "isEnabled": true,
+      "fusionType": "difference",
+      "mode": "default",
       "imageGroups": [
         "temp",
         "test"
       ],
-      "imageTypes": [],
-      "imagePositions": [],
-      "referencePosition": null,
-      "imageGroupMapping": [
-        {
-          "imageGroup": "temp",
-          "imageType": null,
-          "imagePosition": null
-        },
-        {
-          "imageGroup": "test",
-          "imageType": null,
-          "imagePosition": null
-        }
-      ],
-      "comparisons": [
-        {
-          "imageType": null,
-          "imagePosition": null,
-          "directComparison": true,
-          "broadComparison": true,
-          "focusOnDifference": false,
-          "referenceImageGroup": "test"
-        }
-      ]
+      "overlayAnnotationPreview": true,
+      "advancedSettings": {
+        "imageTypes": [],
+        "imagePositions": [],
+        "referencePosition": null,
+        "imageGroupMapping": [],
+        "comparisons": []
+      }
     },
     "validationSettings": {
-      "useValidationSplit": false,
-      "validationSplit": 20
+      "useValidationSplit": true,
+      "validationSplit": 0
     },
     "testSettings": {
       "testImagePercentage": 0,
@@ -71,16 +49,16 @@
       }
     ],
     "hardwareSettings": {
-      "advancedSettings": true,
-      "configurationName": "Custom",
-      "hardwareType": "CPU",
+      "advancedSettings": false,
+      "configurationName": "GPU, Default",
+      "hardwareType": "GPU",
       "prioritizeSpeedOptimization": false,
-      "computeCapability": 1000,
-      "computeCapabilityUnit": "MOPS",
+      "computeCapability": 4,
+      "computeCapabilityUnit": "TOPS",
       "dspBlocks": 0,
       "dspGroups": 1,
       "prioritizeMemoryOptimization": false,
-      "memoryLimit": 4,
+      "memoryLimit": 8,
       "memoryLimitUnit": "GB",
       "optimizeForParallelExecution": false,
       "quantizedCalculations": false,
@@ -194,9 +172,11 @@
       "positionPredictionResolution": 50,
       "allowPositionOverlap": true,
       "precisionRecallPrioritization": 50,
-      "minimumFps": 100
+      "minimumFps": 100,
+      "optimizeSmallObjects": true
     },
     "modelInputSettings": {
+      "segmentResizeThreshold": 50,
       "surroundingSizeMode": "relativeToObject",
       "minRelativeSurroundingSize": 200,
       "maxRelativeSurroundingSize": 200,

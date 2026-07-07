@@ -1,6 +1,6 @@
 {
   "type": "imageDetection",
-  "version": "0.9.7.0",
+  "version": "1.0.30.0",
   "data": {
     "selectedAutoLabelModels": [
       {
@@ -8,20 +8,26 @@
         "minConfidence": 0
       }
     ],
+    "autoLabelMergeThreshold": 80,
     "selectedRunModel": "cups",
     "annotationMode": "objects",
-    "fusionType": "single",
-    "multiImageMode": "Default",
-    "advancedMultiImageSettings": {
+    "capabilityMode": "advanced",
+    "multiImage": {
+      "isEnabled": false,
+      "fusionType": "difference",
+      "mode": "default",
       "imageGroups": [],
-      "imageTypes": [],
-      "imagePositions": [],
-      "referencePosition": null,
-      "imageGroupMapping": [],
-      "comparisons": []
+      "overlayAnnotationPreview": true,
+      "advancedSettings": {
+        "imageTypes": [],
+        "imagePositions": [],
+        "referencePosition": null,
+        "imageGroupMapping": [],
+        "comparisons": []
+      }
     },
     "validationSettings": {
-      "useValidationSplit": false,
+      "useValidationSplit": true,
       "validationSplit": 0
     },
     "testSettings": {
@@ -56,7 +62,7 @@
       "prioritizeMemoryOptimization": false,
       "memoryLimit": 4,
       "memoryLimitUnit": "GB",
-      "optimizeForParallelExecution": true,
+      "optimizeForParallelExecution": false,
       "quantizedCalculations": false,
       "bitsPerValue": 16,
       "fpgaClockSpeed": 50,
@@ -102,6 +108,7 @@
         }
       }
     ],
+    "augmentationsBegin": [],
     "augmentationsStatic": [
       {
         "id": "mosaic",
@@ -179,9 +186,11 @@
       "positionPredictionResolution": 25,
       "allowPositionOverlap": false,
       "precisionRecallPrioritization": 50,
-      "minimumFps": 25
+      "minimumFps": 25,
+      "optimizeSmallObjects": false
     },
     "modelInputSettings": {
+      "segmentResizeThreshold": 50,
       "surroundingSizeMode": "relativeToObject",
       "minRelativeSurroundingSize": 100,
       "maxRelativeSurroundingSize": 100,
@@ -200,6 +209,12 @@
       "estimatedMaxHeight": 90,
       "maxFeatures": 10,
       "avgFeatures": 2
+    },
+    "modelInputBasicModeSettings": {
+      "estimatedSize": "Small,Medium",
+      "numberOfFeatures": "fewFeatures",
+      "typeOfEnvironment": "controlled",
+      "typeOfFeatures": "limited"
     }
   }
 }
