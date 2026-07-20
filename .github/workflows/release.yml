@@ -20,11 +20,10 @@ jobs:
       - name: Zip each project
         run: |
           mkdir -p dist
-          for dir in Chess Chips NIST Wildfire Scratches Tumor DronesAndBirds Cups Tennis Persons; do
-            if [ -d "$dir" ]; then
-              echo "Zipping $dir -> dist/OneAI_${dir}.zip"
-              zip -r "dist/OneAI_${dir}.zip" "$dir/"
-            fi
+          for dir in Projects/*/; do
+            name=$(basename "$dir")
+            echo "Zipping $name -> dist/OneAI_${name}.zip"
+            zip -r "dist/OneAI_${name}.zip" "$dir"
           done
           ls -lh dist/
 
