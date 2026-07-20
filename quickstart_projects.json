@@ -13,7 +13,7 @@
     "name": "Coins Detection",
     "description": "Beginner-friendly object detection demo that detects different euro coins on a conveyer belt.",
     "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_Coins.zip",
-    "previewImageUrl": "https://raw.githubusercontent.com/one-ware/OneAI.QuickStart/main/preview-images/coins.png",
+    "previewImageUrl": "https://raw.githubusercontent.com/one-ware/OneAI.QuickStart/main/preview-images/coins.webp",
     "documentationUrl": null,
     "tags": ["beginner", "objectDetection"]
   },
