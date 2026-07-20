@@ -20,11 +20,19 @@ jobs:
       - name: Zip each project
         run: |
           mkdir -p dist
+
           for dir in Projects/*/; do
             name=$(basename "$dir")
-            echo "Zipping $name -> dist/OneAI_${name}.zip"
-            zip -r "dist/OneAI_${name}.zip" "$dir"
+            output="$GITHUB_WORKSPACE/dist/OneAI_${name}.zip"
+
+            echo "Zipping contents of $dir -> $output"
+
+            (
+              cd "$dir"
+              zip -r "$output" .
+            )
           done
+
           ls -lh dist/
 
       - name: Create or update release
