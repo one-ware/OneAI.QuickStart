@@ -1,6 +1,6 @@
 {
   "type": "imageDetection",
-  "version": "1.0.36.0",
+  "version": "1.0.30.0",
   "data": {
     "selectedAutoLabelModels": [
       {
@@ -12,9 +12,6 @@
     "selectedRunModel": "demo",
     "annotationMode": "objects",
     "capabilityMode": "advanced",
-    "configuration": {
-      "configurations": []
-    },
     "multiImage": {
       "isEnabled": false,
       "fusionType": "difference",
@@ -120,10 +117,7 @@
       "fpgaClockSpeed": 50,
       "maximumMemoryUsage": 25,
       "maximumDspUsage": 25,
-      "dataOverhead": 0,
-      "baseOverhead": 0,
-      "estimatePreprocessing": false,
-      "estimatePostprocessing": false
+      "installedHardware": "Custom"
     },
     "preFiltersBegin": [
       {
@@ -273,15 +267,18 @@
       }
     ],
     "modelOutputSettings": {
+      "classificationType": "allIndividualClasses",
+      "predictionType": "sizePositionClass",
+      "segmentationType": "oneClassPerPixel",
+      "sizePredictionEffort": 50,
       "positionPredictionResolution": 50,
+      "allowPositionOverlap": false,
       "precisionRecallPrioritization": 50,
       "minimumFps": 25,
-      "sizePredictionEffort": 50,
-      "optimizeSmallObjects": false,
-      "predictionType": "sizePositionClass",
-      "allowPositionOverlap": false
+      "optimizeSmallObjects": false
     },
     "modelInputSettings": {
+      "segmentResizeThreshold": 50,
       "surroundingSizeMode": "relativeToObject",
       "minRelativeSurroundingSize": 100,
       "maxRelativeSurroundingSize": 100,
@@ -291,11 +288,19 @@
       "estimatedSurroundingMaxHeight": 90,
       "detectComplexity": 37,
       "sameClassDifference": 5,
-      "backgroundDifference": 8
+      "backgroundDifference": 8,
+      "estimatedMinWidth": 10,
+      "estimatedMinHeight": 10,
+      "estimatedAvgWidth": 50,
+      "estimatedAvgHeight": 50,
+      "estimatedMaxWidth": 90,
+      "estimatedMaxHeight": 90,
+      "maxFeatures": 10,
+      "avgFeatures": 2
     },
     "modelInputBasicModeSettings": {
-      "estimatedSize": "small,medium",
-      "numberOfFeatures": "fewfeatures",
+      "estimatedSize": "Small,Medium",
+      "numberOfFeatures": "fewFeatures",
       "typeOfEnvironment": "controlled",
       "typeOfFeatures": "similar"
     }
