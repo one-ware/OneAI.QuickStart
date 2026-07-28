@@ -97,5 +97,14 @@
     "previewImageUrl": "https://raw.githubusercontent.com/one-ware/OneAI.QuickStart/main/preview-images/persons.webp",
     "documentationUrl": "https://one-ware.com/projects/persons",
     "tags": ["beginner", "segmentation", "rasperry pi"]
+  },
+  {
+    "key": "highway",
+    "name": "Highway Car Detection",
+    "description": "Demo to detect cars on a highway.",
+    "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_Highway.zip",
+    "previewImageUrl": "https://raw.githubusercontent.com/one-ware/OneAI.QuickStart/main/preview-images/highway.webp",
+    "documentationUrl": "https://one-ware.com/projects/highway",
+    "tags": ["beginner", "objectDetection"]
   }
 ]
