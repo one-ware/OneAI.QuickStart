@@ -114,8 +114,8 @@
       }
     ],
     "hardwareSettings": {
-      "advancedSettings": false,
       "configurationName": "Altera\u2122 Max\u00AE 10, 10M02",
+      "advancedSettings": false,
       "hardwareType": "FPGA",
       "prioritizeSpeedOptimization": false,
       "computeCapability": 2240,
@@ -131,7 +131,10 @@
       "fpgaClockSpeed": 50,
       "maximumMemoryUsage": 90,
       "maximumDspUsage": 90,
-      "installedHardware": "Custom"
+      "dataOverhead": 0,
+      "baseOverhead": 0,
+      "estimatePreprocessing": false,
+      "estimatePostprocessing": false
     },
     "preFiltersBegin": [
       {
