@@ -114,16 +114,16 @@
       }
     ],
     "hardwareSettings": {
+      "configurationName": "Altera\u2122 Max\u00AE 10, 10M08",
       "advancedSettings": false,
-      "configurationName": "Altera\u2122 Max\u00AE 10, 10M02",
       "hardwareType": "FPGA",
       "prioritizeSpeedOptimization": false,
-      "computeCapability": 2240,
+      "computeCapability": 3360,
       "computeCapabilityUnit": "MOPS",
-      "dspBlocks": 32,
+      "dspBlocks": 48,
       "dspGroups": 1,
       "prioritizeMemoryOptimization": true,
-      "memoryLimit": 13,
+      "memoryLimit": 47,
       "memoryLimitUnit": "KB",
       "optimizeForParallelExecution": true,
       "quantizedCalculations": true,
@@ -131,7 +131,10 @@
       "fpgaClockSpeed": 50,
       "maximumMemoryUsage": 90,
       "maximumDspUsage": 90,
-      "installedHardware": "Custom"
+      "dataOverhead": 0,
+      "baseOverhead": 0,
+      "estimatePreprocessing": false,
+      "estimatePostprocessing": false
     },
     "preFiltersBegin": [
       {
