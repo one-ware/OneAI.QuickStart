@@ -4,7 +4,7 @@
   "data": {
     "selectedAutoLabelModels": [
       {
-        "name": "SI_2026-10-11_15-00-56",
+        "name": "model",
         "minConfidence": 0
       }
     ],
@@ -54,16 +54,16 @@
       }
     ],
     "hardwareSettings": {
-      "configurationName": "CPU, High-End",
+      "configurationName": "GPU, Low-End",
       "advancedSettings": false,
-      "hardwareType": "CPU",
+      "hardwareType": "GPU",
       "prioritizeSpeedOptimization": false,
-      "computeCapability": 150000,
-      "computeCapabilityUnit": "MOPS",
+      "computeCapability": 4,
+      "computeCapabilityUnit": "TOPS",
       "dspBlocks": 0,
       "dspGroups": 1,
       "prioritizeMemoryOptimization": false,
-      "memoryLimit": 32,
+      "memoryLimit": 4,
       "memoryLimitUnit": "GB",
       "optimizeForParallelExecution": false,
       "quantizedCalculations": false,
@@ -81,9 +81,9 @@
         "id": "initialResize",
         "isEnabled": true,
         "settings": {
-          "width": 1288,
-          "height": 808,
-          "resolution": 35,
+          "width": 1264,
+          "height": 640,
+          "resolution": 40,
           "resizeInModel": false,
           "usePadding": false
         }
