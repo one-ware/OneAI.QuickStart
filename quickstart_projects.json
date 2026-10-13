@@ -1,5 +1,14 @@
 [
   {
+    "key": "pizza",
+    "name": "Pizza Topping Detection",
+    "description": "Object detection demo that detects pizza toppings: pepperoni, black olives, mushrooms and green peppers.",
+    "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_PizzaTopping.zip",
+    "previewImageUrl": "https://raw.githubusercontent.com/one-ware/OneAI.QuickStart/main/preview-images/pizza.webp",
+    "documentationUrl": null,
+    "tags": ["beginner", "objectDetection"]
+  },
+  {
     "key": "chess",
     "name": "Chess Pieces Detection",
     "description": "Beginner-friendly object detection demo that detects and localizes chess pieces on a chessboard.",
@@ -96,7 +105,7 @@
     "downloadUrl": "https://github.com/one-ware/OneAI.QuickStart/releases/download/1.0/OneAI_Persons.zip",
     "previewImageUrl": "https://raw.githubusercontent.com/one-ware/OneAI.QuickStart/main/preview-images/persons.webp",
     "documentationUrl": "https://one-ware.com/projects/persons",
-    "tags": ["beginner", "segmentation", "rasperry pi"]
+    "tags": ["beginner", "segmentation", "raspberry pi"]
   },
   {
     "key": "highway",

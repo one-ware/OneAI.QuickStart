@@ -1,16 +1,15 @@
 {
   "type": "imageDetection",
-  "guid": "39b62eab-2279-4be3-82fd-5e72f6446846",
   "version": "1.0.41.0",
   "data": {
     "selectedAutoLabelModels": [
       {
-        "name": "Test_2026-07-28_11-00-46",
+        "name": "OneAI_Test",
         "minConfidence": 0
       }
     ],
     "autoLabelMergeThreshold": 80,
-    "selectedRunModel": "Test_2026-07-28_11-00-46",
+    "selectedRunModel": "OneAI_Test",
     "annotationMode": "objects",
     "capabilityMode": "basic",
     "configuration": {

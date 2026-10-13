@@ -1,0 +1,52 @@
+{
+  "version": "1.0.51.0",
+  "cameras": [
+    {
+      "type": "video",
+      "videoFilePath": "/var/home/hmennen/OneWareStudio/Projects/EW_26_Super/Recordings/camera_record_20260307_100333.mp4",
+      "name": "Video simulated camera",
+      "staticSettings": {
+        "fps": 60,
+        "width": 1264,
+        "height": 640
+      },
+      "presets": [
+        {
+          "type": "video",
+          "name": "Preset 1",
+          "relativeCropLeft": 0,
+          "relativeCropTop": 0,
+          "relativeCropRight": 0,
+          "relativeCropBottom": 0,
+          "resizeAfterCaptureValue": 0,
+          "resizeToWidth": false
+        }
+      ],
+      "appliedPresetName": null
+    }
+  ],
+  "captureSettings": {
+    "saveDirectory": "Train",
+    "saveSubDirectory": null,
+    "saveSubDirectoryFail": null,
+    "saveSubDirectoryFalseDetection": null,
+    "saveFileNameAddition": null,
+    "imageFormat": ".jpg",
+    "isAiCheckEnabled": false,
+    "remoteControlIsEnabled": false,
+    "remoteControlUrl": "http://localhost:2800/",
+    "validationRuleOptions": []
+  },
+  "videoRecordSettings": {
+    "selectedCamera": null,
+    "selectedPreset": null
+  },
+  "runSettings": {
+    "selectedCamera": null,
+    "selectedPreset": null,
+    "previewMode": null,
+    "overlayOpacity": 0.4,
+    "legendFontSize": 25,
+    "synchronize": false
+  }
+}
