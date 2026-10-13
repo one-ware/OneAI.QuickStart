@@ -170,7 +170,7 @@
       },
       {
         "id": "rotate",
-        "isEnabled": false,
+        "isEnabled": true,
         "settings": {
           "fromAngle": -180,
           "toAngle": 180

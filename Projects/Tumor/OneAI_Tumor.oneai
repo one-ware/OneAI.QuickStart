@@ -1,23 +1,26 @@
 {
   "type": "imageDetection",
-  "version": "1.0.30.0",
+  "version": "1.0.51.0",
   "data": {
     "selectedAutoLabelModels": [
       {
         "name": "demo",
-        "minConfidence": 100
+        "minConfidence": 0
       }
     ],
     "autoLabelMergeThreshold": 80,
     "selectedRunModel": "",
     "annotationMode": "segmentation",
     "capabilityMode": "advanced",
+    "configuration": {
+      "configurations": []
+    },
     "multiImage": {
       "isEnabled": false,
       "fusionType": "difference",
       "mode": "default",
       "imageGroups": [],
-      "overlayAnnotationPreview": true,
+      "annotationDisplayMode": "all",
       "advancedSettings": {
         "imageTypes": [],
         "imagePositions": [],
@@ -42,13 +45,6 @@
         "groupId": 1,
         "color": 4288873747,
         "excludeFromTraining": false
-      },
-      {
-        "name": "Undefined Label",
-        "id": 2,
-        "groupId": 1,
-        "color": 4278190082,
-        "excludeFromTraining": false
       }
     ],
     "groups": [
@@ -58,8 +54,8 @@
       }
     ],
     "hardwareSettings": {
-      "advancedSettings": false,
       "configurationName": "GPU, Default",
+      "advancedSettings": false,
       "hardwareType": "GPU",
       "prioritizeSpeedOptimization": false,
       "computeCapability": 4,
@@ -75,7 +71,10 @@
       "fpgaClockSpeed": 50,
       "maximumMemoryUsage": 25,
       "maximumDspUsage": 25,
-      "installedHardware": "Custom"
+      "dataOverhead": 0,
+      "baseOverhead": 0,
+      "estimatePreprocessing": false,
+      "estimatePostprocessing": false
     },
     "preFiltersBegin": [
       {
@@ -90,26 +89,7 @@
         }
       }
     ],
-    "preFiltersBeforeAugmentation": [
-      {
-        "id": "sharpen",
-        "isEnabled": false,
-        "settings": {
-          "sharpen": 5
-        }
-      },
-      {
-        "id": "color",
-        "isEnabled": false,
-        "settings": {
-          "brightness": 5,
-          "contrast": 100,
-          "saturation": 100,
-          "hue": 0,
-          "gamma": 100
-        }
-      }
-    ],
+    "preFiltersBeforeAugmentation": [],
     "preFiltersAfterAugmentation": [],
     "preFiltersEnd": [
       {
@@ -149,10 +129,10 @@
       },
       {
         "id": "flip",
-        "isEnabled": false,
+        "isEnabled": true,
         "settings": {
           "horizontal": true,
-          "vertical": true
+          "vertical": false
         }
       },
       {
@@ -169,34 +149,30 @@
     "augmentationsDynamic": [
       {
         "id": "color",
-        "isEnabled": false,
+        "isEnabled": true,
         "settings": {
           "fromBrightness": -10,
           "fromContrast": 90,
-          "fromSaturation": 80,
+          "fromSaturation": 100,
           "fromHue": 0,
           "fromGamma": 100,
           "toBrightness": 10,
           "toContrast": 110,
-          "toSaturation": 120,
+          "toSaturation": 100,
           "toHue": 0,
           "toGamma": 100
         }
       }
     ],
     "modelOutputSettings": {
-      "classificationType": "allIndividualClasses",
-      "predictionType": "sizePositionClass",
-      "segmentationType": "oneClassPerPixel",
-      "sizePredictionEffort": 25,
       "positionPredictionResolution": 25,
-      "allowPositionOverlap": false,
       "precisionRecallPrioritization": 50,
       "minimumFps": 25,
-      "optimizeSmallObjects": false
+      "sizePredictionEffort": 25,
+      "optimizeSmallObjects": false,
+      "segmentationType": "oneClassPerPixel"
     },
     "modelInputSettings": {
-      "segmentResizeThreshold": 50,
       "surroundingSizeMode": "relativeToObject",
       "minRelativeSurroundingSize": 100,
       "maxRelativeSurroundingSize": 100,
@@ -207,18 +183,11 @@
       "detectComplexity": 40,
       "sameClassDifference": 40,
       "backgroundDifference": 20,
-      "estimatedMinWidth": 10,
-      "estimatedMinHeight": 10,
-      "estimatedAvgWidth": 50,
-      "estimatedAvgHeight": 50,
-      "estimatedMaxWidth": 90,
-      "estimatedMaxHeight": 90,
-      "maxFeatures": 10,
-      "avgFeatures": 2
+      "segmentResizeThreshold": 50
     },
     "modelInputBasicModeSettings": {
-      "estimatedSize": "Small,Medium",
-      "numberOfFeatures": "fewFeatures",
+      "estimatedSize": "small,medium",
+      "numberOfFeatures": "fewfeatures",
       "typeOfEnvironment": "controlled",
       "typeOfFeatures": "limited"
     }

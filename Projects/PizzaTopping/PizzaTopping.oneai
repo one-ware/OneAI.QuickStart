@@ -4,7 +4,7 @@
   "data": {
     "selectedAutoLabelModels": [
       {
-        "name": "model",
+        "name": "demo",
         "minConfidence": 0
       }
     ],
@@ -178,7 +178,24 @@
         }
       }
     ],
-    "augmentationsDynamic": [],
+    "augmentationsDynamic": [
+      {
+        "id": "color",
+        "isEnabled": true,
+        "settings": {
+          "fromBrightness": -10,
+          "fromContrast": 90,
+          "fromSaturation": 80,
+          "fromHue": 0,
+          "fromGamma": 100,
+          "toBrightness": 10,
+          "toContrast": 110,
+          "toSaturation": 120,
+          "toHue": 0,
+          "toGamma": 100
+        }
+      }
+    ],
     "modelOutputSettings": {
       "positionPredictionResolution": 100,
       "precisionRecallPrioritization": 50,

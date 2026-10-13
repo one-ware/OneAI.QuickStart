@@ -1,23 +1,26 @@
 {
   "type": "imageDetection",
-  "version": "1.0.29.0",
+  "version": "1.0.51.0",
   "data": {
     "selectedAutoLabelModels": [
       {
-        "name": "NIST_SD19_random",
+        "name": "demo",
         "minConfidence": 0
       }
     ],
     "autoLabelMergeThreshold": 80,
-    "selectedRunModel": "NIST_SD19_random",
+    "selectedRunModel": "",
     "annotationMode": "classes",
     "capabilityMode": "advanced",
+    "configuration": {
+      "configurations": []
+    },
     "multiImage": {
       "isEnabled": false,
       "fusionType": "difference",
       "mode": "default",
       "imageGroups": [],
-      "overlayAnnotationPreview": true,
+      "annotationDisplayMode": "all",
       "advancedSettings": {
         "imageTypes": [],
         "imagePositions": [],
@@ -153,14 +156,14 @@
       {
         "id": "inverse",
         "isEnabled": true,
-        "settings": null
+        "settings": {}
       }
     ],
     "preFiltersAfterAugmentation": [
       {
         "id": "normalize",
         "isEnabled": true,
-        "settings": null
+        "settings": {}
       },
       {
         "id": "threshold",
@@ -206,8 +209,8 @@
         "id": "rotate",
         "isEnabled": true,
         "settings": {
-          "fromAngle": 20,
-          "toAngle": -20
+          "fromAngle": -20,
+          "toAngle": 20
         }
       },
       {
@@ -231,22 +234,6 @@
     ],
     "augmentationsDynamic": [
       {
-        "id": "color",
-        "isEnabled": true,
-        "settings": {
-          "fromBrightness": -30,
-          "fromContrast": 80,
-          "fromSaturation": 100,
-          "fromHue": 0,
-          "fromGamma": 100,
-          "toBrightness": 30,
-          "toContrast": 120,
-          "toSaturation": 100,
-          "toHue": 0,
-          "toGamma": 100
-        }
-      },
-      {
         "id": "frequency",
         "isEnabled": true,
         "settings": {
@@ -254,7 +241,7 @@
           "fromLowPassSigma": 0,
           "toEnableLowPass": true,
           "toLowPassSigma": 1.5,
-          "enableLowPassKernel": false,
+          "toEnableLowPassKernel": false,
           "toKernelSize": 5
         }
       },
@@ -268,18 +255,14 @@
       }
     ],
     "modelOutputSettings": {
-      "classificationType": "oneClassPerImage",
-      "predictionType": "sizePositionClass",
-      "segmentationType": "oneClassPerPixel",
-      "sizePredictionEffort": 25,
       "positionPredictionResolution": 25,
-      "allowPositionOverlap": false,
       "precisionRecallPrioritization": 50,
       "minimumFps": 60,
-      "optimizeSmallObjects": false
+      "sizePredictionEffort": 25,
+      "optimizeSmallObjects": false,
+      "classificationType": "oneClassPerImage"
     },
     "modelInputSettings": {
-      "segmentResizeThreshold": 50,
       "surroundingSizeMode": "relativeToImage",
       "minRelativeSurroundingSize": 100,
       "maxRelativeSurroundingSize": 100,
@@ -300,8 +283,8 @@
       "avgFeatures": 2
     },
     "modelInputBasicModeSettings": {
-      "estimatedSize": "Small,Medium",
-      "numberOfFeatures": "fewFeatures",
+      "estimatedSize": "small,medium",
+      "numberOfFeatures": "fewfeatures",
       "typeOfEnvironment": "controlled",
       "typeOfFeatures": "limited"
     }

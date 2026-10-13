@@ -1,15 +1,15 @@
 {
   "type": "imageDetection",
-  "version": "1.0.41.0",
+  "version": "1.0.51.0",
   "data": {
     "selectedAutoLabelModels": [
       {
-        "name": "OneAI_Test",
+        "name": "demo",
         "minConfidence": 0
       }
     ],
     "autoLabelMergeThreshold": 80,
-    "selectedRunModel": "OneAI_Test",
+    "selectedRunModel": "",
     "annotationMode": "objects",
     "capabilityMode": "basic",
     "configuration": {
@@ -20,7 +20,7 @@
       "fusionType": "difference",
       "mode": "default",
       "imageGroups": [],
-      "overlayAnnotationPreview": true,
+      "annotationDisplayMode": "all",
       "advancedSettings": {
         "imageTypes": [],
         "imagePositions": [],
@@ -140,9 +140,9 @@
       },
       {
         "id": "flip",
-        "isEnabled": false,
+        "isEnabled": true,
         "settings": {
-          "horizontal": false,
+          "horizontal": true,
           "vertical": false
         }
       },
@@ -169,8 +169,8 @@
           "fromGamma": 100,
           "toBrightness": 10,
           "toContrast": 130,
-          "toSaturation": 90,
-          "toHue": 0,
+          "toSaturation": 120,
+          "toHue": 1.5,
           "toGamma": 120
         }
       }

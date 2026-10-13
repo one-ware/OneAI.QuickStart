@@ -1,6 +1,6 @@
 {
   "type": "imageDetection",
-  "version": "1.0.30.0",
+  "version": "1.0.51.0",
   "data": {
     "selectedAutoLabelModels": [
       {
@@ -8,16 +8,19 @@
         "minConfidence": 0
       }
     ],
-    "autoLabelMergeThreshold": 80,
+    "autoLabelMergeThreshold": 50,
     "selectedRunModel": "",
     "annotationMode": "objects",
     "capabilityMode": "advanced",
+    "configuration": {
+      "configurations": []
+    },
     "multiImage": {
       "isEnabled": false,
       "fusionType": "difference",
       "mode": "default",
       "imageGroups": [],
-      "overlayAnnotationPreview": true,
+      "annotationDisplayMode": "all",
       "advancedSettings": {
         "imageTypes": [],
         "imagePositions": [],
@@ -128,8 +131,8 @@
       }
     ],
     "hardwareSettings": {
-      "advancedSettings": true,
       "configurationName": "Custom",
+      "advancedSettings": true,
       "hardwareType": "CPU",
       "prioritizeSpeedOptimization": false,
       "computeCapability": 10000,
@@ -145,7 +148,10 @@
       "fpgaClockSpeed": 50,
       "maximumMemoryUsage": 25,
       "maximumDspUsage": 25,
-      "installedHardware": "Custom"
+      "dataOverhead": 0,
+      "baseOverhead": 0,
+      "estimatePreprocessing": false,
+      "estimatePostprocessing": false
     },
     "preFiltersBegin": [
       {
@@ -212,9 +218,9 @@
       },
       {
         "id": "flip",
-        "isEnabled": false,
+        "isEnabled": true,
         "settings": {
-          "horizontal": false,
+          "horizontal": true,
           "vertical": false
         }
       },
@@ -236,30 +242,39 @@
         "settings": {
           "fromBrightness": -10,
           "fromContrast": 90,
-          "fromSaturation": 80,
-          "fromHue": -1.5,
+          "fromSaturation": 100,
+          "fromHue": 0,
           "fromGamma": 100,
           "toBrightness": 10,
           "toContrast": 110,
-          "toSaturation": 120,
-          "toHue": 1.5,
+          "toSaturation": 100,
+          "toHue": 0,
           "toGamma": 100
+        }
+      },
+      {
+        "id": "frequency",
+        "isEnabled": true,
+        "settings": {
+          "fromEnableLowPass": true,
+          "fromLowPassSigma": 0,
+          "toEnableLowPass": true,
+          "toLowPassSigma": 1.5,
+          "toEnableLowPassKernel": false,
+          "toKernelSize": 5
         }
       }
     ],
     "modelOutputSettings": {
-      "classificationType": "allIndividualClasses",
-      "predictionType": "sizePositionClass",
-      "segmentationType": "oneClassPerPixel",
-      "sizePredictionEffort": 50,
       "positionPredictionResolution": 50,
-      "allowPositionOverlap": false,
       "precisionRecallPrioritization": 50,
       "minimumFps": 60,
-      "optimizeSmallObjects": false
+      "sizePredictionEffort": 50,
+      "optimizeSmallObjects": false,
+      "predictionType": "sizePositionClass",
+      "allowPositionOverlap": false
     },
     "modelInputSettings": {
-      "segmentResizeThreshold": 50,
       "surroundingSizeMode": "relativeToObject",
       "minRelativeSurroundingSize": 100,
       "maxRelativeSurroundingSize": 100,
@@ -267,21 +282,13 @@
       "estimatedSurroundingMinHeight": 10,
       "estimatedSurroundingMaxWidth": 90,
       "estimatedSurroundingMaxHeight": 90,
-      "detectComplexity": 30,
+      "detectComplexity": 50,
       "sameClassDifference": 10,
-      "backgroundDifference": 10,
-      "estimatedMinWidth": 10,
-      "estimatedMinHeight": 10,
-      "estimatedAvgWidth": 50,
-      "estimatedAvgHeight": 50,
-      "estimatedMaxWidth": 90,
-      "estimatedMaxHeight": 90,
-      "maxFeatures": 10,
-      "avgFeatures": 2
+      "backgroundDifference": 10
     },
     "modelInputBasicModeSettings": {
-      "estimatedSize": "Small,Medium",
-      "numberOfFeatures": "fewFeatures",
+      "estimatedSize": "small,medium",
+      "numberOfFeatures": "fewfeatures",
       "typeOfEnvironment": "controlled",
       "typeOfFeatures": "limited"
     }

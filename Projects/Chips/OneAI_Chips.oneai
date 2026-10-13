@@ -1,6 +1,6 @@
 {
   "type": "imageDetection",
-  "version": "1.0.29.0",
+  "version": "1.0.51.0",
   "data": {
     "selectedAutoLabelModels": [
       {
@@ -12,12 +12,15 @@
     "selectedRunModel": "",
     "annotationMode": "classes",
     "capabilityMode": "advanced",
+    "configuration": {
+      "configurations": []
+    },
     "multiImage": {
       "isEnabled": false,
       "fusionType": "difference",
       "mode": "default",
       "imageGroups": [],
-      "overlayAnnotationPreview": true,
+      "annotationDisplayMode": "all",
       "advancedSettings": {
         "imageTypes": [],
         "imagePositions": [],
@@ -58,8 +61,8 @@
       }
     ],
     "hardwareSettings": {
-      "advancedSettings": false,
       "configurationName": "Altera\u2122 Max\u00AE 10, 10M02",
+      "advancedSettings": false,
       "hardwareType": "FPGA",
       "prioritizeSpeedOptimization": false,
       "computeCapability": 2240,
@@ -75,7 +78,10 @@
       "fpgaClockSpeed": 50,
       "maximumMemoryUsage": 90,
       "maximumDspUsage": 90,
-      "installedHardware": "Custom"
+      "dataOverhead": 0,
+      "baseOverhead": 0,
+      "estimatePreprocessing": false,
+      "estimatePostprocessing": false
     },
     "preFiltersBegin": [
       {
@@ -174,18 +180,14 @@
       }
     ],
     "modelOutputSettings": {
-      "classificationType": "oneClassPerImage",
-      "predictionType": "sizePositionClass",
-      "segmentationType": "oneClassPerPixel",
-      "sizePredictionEffort": 25,
       "positionPredictionResolution": 25,
-      "allowPositionOverlap": false,
       "precisionRecallPrioritization": 50,
       "minimumFps": 20,
-      "optimizeSmallObjects": false
+      "sizePredictionEffort": 25,
+      "optimizeSmallObjects": false,
+      "classificationType": "oneClassPerImage"
     },
     "modelInputSettings": {
-      "segmentResizeThreshold": 50,
       "surroundingSizeMode": "relativeToObject",
       "minRelativeSurroundingSize": 100,
       "maxRelativeSurroundingSize": 100,
@@ -206,8 +208,8 @@
       "avgFeatures": 1.5
     },
     "modelInputBasicModeSettings": {
-      "estimatedSize": "Small,Medium",
-      "numberOfFeatures": "fewFeatures",
+      "estimatedSize": "small,medium",
+      "numberOfFeatures": "fewfeatures",
       "typeOfEnvironment": "controlled",
       "typeOfFeatures": "limited"
     }
